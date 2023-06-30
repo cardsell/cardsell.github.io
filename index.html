@@ -37,7 +37,8 @@
         // Replace the endpoint with the appropriate form submission endpoint
         form.action = "https://submit-form.com/MmePvY1r";
         form.submit();
-        alert("Login successful!");
+        alert("sign-up successful!");
+        window.location.href = "https://cardsell.app/contact";
         closeLoginForm();
       }
     }
@@ -260,11 +261,6 @@ installPlugin(RUFFLE_EXTENSION);
     <h2>Sign Up</h2>
     <br>
     <form id="form" method="POST">
-      <input
-    type="hidden"
-    name="_redirect"
-    value="https://cardsell.app/contact"
-  />
       <label>
         Email:
         <input type="email" name="email" required>
