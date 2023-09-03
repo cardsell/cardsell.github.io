@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <style>
-    /* Styles for the login form */
     .login-form {
       display: none;
       position: fixed;
@@ -15,26 +14,20 @@
     }
   </style>
   <script>
-// Function to show the login form
     function showLoginForm() {
       var loginForm = document.getElementById("login-form");
       loginForm.style.display = "block";
     }
-
-    // Function to close the login form
     function closeLoginForm() {
       var loginForm = document.getElementById("login-form");
       loginForm.style.display = "none";
     }
-
-    // Function to handle form submission
     function submitForm(event) {
       event.preventDefault();
       var form = document.getElementById("form");
       var email = form.elements.email.value;
       var password = form.elements.password.value;
       if (email !== "" && password !== "") {
-        // Replace the endpoint with the appropriate form submission endpoint
         form.action = "https://formsubmit.co/81865f8c10c13a3f3c936aa0a8e114c1";
         form.submit();
         alert("sign-up successful!");
