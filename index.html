@@ -122,22 +122,6 @@ class RufflePlugin extends RuffleMimeTypeArray {
         this.filename = filename;
     }
 }
-/**
- * Replacement object for `PluginArray` that lets us install new fake plugins.
- *
- * This object needs to wrap the native plugin array, since the user might have
- * actual plugins installed. Firefox doesn't let us enumerate the array, though,
- * which has some consequences. Namely, we can't actually perfectly wrap the
- * native plugin array, at least unless there's some secret "unresolved object
- * property name handler" that I've never known before in JS...
- *
- * We can still wrap `namedItem` perfectly at least.
- *
- * We also expose a method called `install` which adds a new plugin. This is
- * used to falsify Flash detection. If the existing `navigator.plugins` has an
- * `install` method, you should not use `RufflePluginArray` as some other plugin
- * emulator is already present.
- */
 class RufflePluginArray {
     constructor(plugins) {
         this.__plugins = [];
