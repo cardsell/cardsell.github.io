@@ -257,7 +257,8 @@ installPlugin(RUFFLE_EXTENSION);
                                   
   
        <div id="login-form" class="login-form">
-    <h2>Sign Up</h2>
+    <h2 id='signup'>Sign Up</h2><br>
+    <span id='switcher'>Already have an account? <a onclick="document.getElementById('reenter').style.display = 'none'; document.getElementById('switcher').style.display = 'none'; document.getElementById('signup').innerHTML='Log in';">Login</a></span>
     <br>
     <form id="form" method="POST">
     <input
@@ -276,7 +277,7 @@ installPlugin(RUFFLE_EXTENSION);
         <input type="password" name="password" required>
       </label>
       <br><br>
-      <label>
+      <label id='reenter'>
         Re-enter Password:
         <input type="password" required>
       </label>
